@@ -7,7 +7,7 @@ http
       fs.readFile('index.html', function (err, data) {
         if (err) throw err
         res.writeHead(200, { 'Content-Type': 'text/html' })
-        res.writable(data)
+        res.write(data)
         return res.end
       })
     } else if (req.url === '/about') {
